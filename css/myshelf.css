@@ -1,0 +1,9 @@
+.shelf-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shelf-img img {
+    max-width: 60%;
+}
