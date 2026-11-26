@@ -36,3 +36,52 @@ if (profileBtn && sidebar) {
     if (e.key === "Escape") closeSidebar();
   });
 }
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const modalUser = document.getElementById("modal-user");
+const commentsList = document.getElementById("comments");
+const commentForm = document.getElementById("comment-form");
+const commentInput = document.getElementById("comment-input");
+
+// open the popup when a shelf is clicked
+document.querySelectorAll(".shelf_one").forEach(function (img) {
+    img.addEventListener("click", function () {
+        modalImg.src = img.src;
+        modalUser.textContent = img.dataset.user || "@user";
+        modal.classList.add("open");
+    });
+});
+
+function closeModal() {
+    modal.classList.remove("open");
+}
+
+document.getElementById("modal-close").addEventListener("click", closeModal);
+
+// click the dark background to close
+modal.addEventListener("click", function (e) {
+    if (e.target === modal) closeModal();
+});
+
+// Escape key closes it
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeModal();
+});
+
+// post a comment
+commentForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const text = commentInput.value.trim();
+    if (text === "") return;
+
+    const li = document.createElement("li");
+    const name = document.createElement("strong");
+    name.textContent = "you ";
+    li.appendChild(name);
+    li.appendChild(document.createTextNode(text));
+
+    commentsList.appendChild(li);
+    commentsList.scrollTop = commentsList.scrollHeight;
+    commentInput.value = "";
+});

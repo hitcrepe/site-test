@@ -16,7 +16,7 @@
 
 .panel {
     min-height: 600px;
-    padding: 10rem;
+    padding: 3rem;
     background: var(--panel-color);
 }
 
@@ -29,6 +29,7 @@ h2 {
 
 /* 1. hero */
 .hero {
+    /* Fits within the remaining viewport height after the navbar */
     min-height: calc(100vh - var(--nav-height) - 3rem);
     padding: 2.5rem 2rem 3.5rem;
     display: flex;
