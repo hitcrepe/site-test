@@ -1,4 +1,6 @@
+@import url(home_css.css);
 @import url("reset.css");
+/*------main.css----*/
 a,
 button,
 .btn,
@@ -42,15 +44,12 @@ body{
     position: sticky;
     top: 0;
     z-index: 100;
-
     width: 100%;
     padding: 0.4rem 2%;
     margin-bottom: 2rem;
-
     background: rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
-
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -273,25 +272,12 @@ header .image-text .text{
 
 /* ---------- CONTENT ---------- */
 .content{
-    padding: 0 2%;
-}
-
-.hero-logo {
-    margin-inline: auto;    
-    margin-block: 2rem; 
-    width: min(600px, 90%);
-    height: auto;
+    padding: 0 3%;
 }
 
 .content img{
     max-width: 100%;
     display: block;
-}
-
-#start-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
 }
 
 #start-button a {
