@@ -1,3 +1,19 @@
+a,
+button,
+.btn,
+.profile,
+.close-btn,
+[role="button"] {
+    cursor: pointer;  /*Makes it so if the user hovers over interactable links, cursor will change accordingly*/
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid aliceblue;    /*shows keyboard users which link is focused when they press Tab*/
+    outline-offset: 3px;
+}
+
 :root{
     --sidebar-color: rgb(30, 32, 44);
     --sidebar-width: 250px;
@@ -16,6 +32,9 @@ body{
     color: aliceblue;
     overflow-x: hidden;             /* no horizontal scrollbar while the sidebar is off-screen */
 }
+
+
+
 
 /* ---------- TOP NAVBAR (blur + effects) ---------- */
 .navbar{
@@ -251,8 +270,66 @@ header .image-text .text{
     padding: 0 2%;
 }
 
+.hero-logo {
+    margin-inline: auto;    
+    margin-block: 2rem; 
+    width: min(600px, 90%);
+    height: auto;
+}
+
 .content img{
     max-width: 100%;
     display: block;
 }
 
+#start-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+#start-button a {
+    display: inline-block;  
+    padding: 1rem 3rem;
+    background-color: rgb(97, 177, 202);
+    color: rgb(39, 42, 54);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+#start-button a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/*---------- FOOTER STYLING ------------------------*/
+.footer_text {
+    display: flex;
+    flex-direction: column;    /* links on top, icons below */
+    align-items: center;       /* centers each row horizontally */
+    justify-content: center;
+    gap: 1.5rem;               /* space between the links row and icons row */
+    padding: 2rem;
+    text-align: center;
+    font-size: 22px;
+}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;               /* space between icons */
+}
+
+footer img {
+    height: 36px;
+    width: auto;
+    display: block;
+}
