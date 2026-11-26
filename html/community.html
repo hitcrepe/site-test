@@ -1,121 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css"/>
-    <title>My Shelf</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/community.css">
+
+    <title>Community</title>
 </head>
 
 <body>
-    <!-- TOP NAVBAR (HTML) -->
-    <nav class="navbar">
 
+    <!-- TOP NAVBAR -->
+    <nav class="navbar">
         <div class="logo">
             <a href="../index.html">
                 <img src="../images/noma.png" alt="logo">
             </a>
+            <h3>displayed</h3>
         </div>
 
         <ul class="nav-links">
-            <li><a href="./myshelf.html">Myshelf</a></li>
-            <li><a href="./about_us_and_news.html">About us and News</a></li>
-            <li><a href="./community.html">Community</a></li>
-            <li><a href="./shop.html">Shop</a></li>
+            <li><a href="./myshelf.html">myshelf</a></li>
+            <li><a href="./about_us_and_news.html">about us and news</a></li>
+            <li><a href="./community.html">community</a></li>
+            <li><a href="./shop.html">shop</a></li>
         </ul>
 
-        <input
-            class="search"
-            type="search"
-            placeholder="Search for anything"
-        >
+        <input class="search" type="search" placeholder="Search for anything">
 
         <div class="btns">
-            <button class="btn">Login</button>
-            <button class="btn">Sign Up</button>
-
-            <button
-                class="profile"
-                id="profile-btn"
-                aria-label="Open side menu"
-                aria-expanded="false"
-            >
-                EB
-            </button>
+            <button class="btn">login</button>
+            <button class="btn">Sign up</button>
+            <button class="profile" id="profile-btn" aria-label="Open side menu" aria-expanded="false">EB</button>
         </div>
     </nav>
 
-
-    <!-- SIDEBAR (HTML) (slides in from the right) -->
+    <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar">
         <header>
             <div class="image-text">
-
                 <span class="image">
-                    <img
-                        class="water"
-                        src="../images/noma.png"
-                        alt="noma"
-                    >
+                    <img class="water" src="../images/noma.png" alt="noma">
                 </span>
-
                 <div class="text">
                     <span class="name">coding lab</span>
                     <span class="profession">web developer</span>
                 </div>
             </div>
 
-            <button
-                class="close-btn"
-                id="close-btn"
-                aria-label="Close side menu"
-            >
-                &times;
-            </button>
+            <button class="close-btn" id="close-btn" aria-label="Close side menu">&times;</button>
         </header>
 
         <div class="menu-bar">
             <div class="menu">
-
                 <ul class="menu-links">
-                     <a href="settings.html">
-                    <span class="text nav-text">Settings</span>
-                </a>
-            </li>
-
-            <li class="navmenu-links">
-                <a href="profile.html">
-                    <span class="text nav-text">Profile</span>
-                </a>
-            </li>
-            <li class="navmenu-links">
-                <a href="friends.html">
-                    <span class="text nav-text">Friends</span>
-                </a>
-            </li>            
-            <li class="navmenu-links">
-                <a href="myshelf.html">
-                    <span class="text nav-text">My Collection</span>
-                </a>
-            </li>
-            <li class="navmenu-links">
-                <a href="help.html">
-                    <span class="text nav-text">Help & Support</span>
-                </a>
-            </li>
-            <li class="navmenu-links">
-                <a href="logout.html">
-                    <span class="text nav-text">Logout</span>
-                </a>
-            </li>
+                    <li class="navmenu-links">
+                        <a href="./settings.html"><span class="text nav-text">Settings</span></a>
+                    </li>
+                    <li class="navmenu-links">
+                        <a href="./profile.html"><span class="text nav-text">Profile</span></a>
+                    </li>
+                    <li class="navmenu-links">
+                        <a href="./myshelf.html"><span class="text nav-text">My Collection</span></a>
+                    </li>
+                    <li class="navmenu-links">
+                        <a href="./help.html"><span class="text nav-text">Help &amp; Support</span></a>
+                    </li>
+                    <li class="navmenu-links">
+                        <a href="./logout.html"><span class="text nav-text">Logout</span></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </aside>
-    <!-- SIDEBAR END -->
+
+    <!-- SHELVES -->
+    <div class="row1">
+        <ul>
+            <li><img class="shelf_one" data-user="@user111" src="../images/pixil-frame-0_22.png" alt="shelf"></li>
+            <li><img class="shelf_one" data-user="@user222" src="../images/pixil-frame-0_22.png" alt="shelf"></li>
+            <li><img class="shelf_one" data-user="@user333" src="../images/pixil-frame-0_22.png" alt="shelf"></li>
+        </ul>
+    </div>
+
+    <div class="row2">
+        <ul>
+            <li><img class="shelf_one" data-user="@user444" src="../images/pixil-frame-0_22.png" alt="shelf"></li>
+            <li><img class="shelf_one" data-user="@user555" src="../images/pixil-frame-0_22.png" alt="shelf"></li>
+            <li><img class="shelf_one" data-user="@user666" src="../images/pixil-frame-0_22.png" alt="shelf"></li>
+        </ul>
+    </div>
+
+    <!-- POPUP -->
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+        <div class="modal-box">
+            <div class="modal-image">
+                <img id="modal-img" src="" alt="shelf">
+            </div>
+
+            <div class="modal-side">
+                <div class="modal-profile">
+                    <div class="avatar">EB</div>
+                    <span id="modal-user">@user</span>
+                </div>
+
+                <ul class="comments" id="comments">
+                    <li><strong>user222</strong> love this shelf!</li>
+                    <li><strong>user333</strong> where did you get that one?</li>
+                </ul>
+
+                <form class="comment-form" id="comment-form">
+                    <input type="text" id="comment-input" placeholder="Add a comment..." autocomplete="off">
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="../js/main.js"></script>
+    <script src="../js/community.js"></script>
 
 </body>
 </html>
